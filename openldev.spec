@@ -1,6 +1,6 @@
 %define name openldev
-%define version 0.6.1
-%define release %mkrel 6
+%define version 1.0
+%define release %mkrel 1
 
 %define lib_name_orig lib%{name}
 %define lib_major 1.0
@@ -15,7 +15,7 @@ Group: Development/Other
 URL: http://www.openldev.org/
 Source0: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: gtksourceview-devel
+BuildRequires: libgtksourceview-1.0-devel
 BuildRequires: libglade2.0-devel
 BuildRequires: vte-devel
 BuildRequires: libxml2-devel
@@ -107,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT/%{_defaultdocdir}
 perl -pi -e "s/\r\n/\n/" NEWS README
 
 # change mode for script (add executable mode)
-chmod +x %{buildroot}%{_datadir}/%{name}/templates/*.sh
+chmod +x %{buildroot}%{_datadir}/%{name}/templates/*.pl
 
 %post 
 %{update_menus}
@@ -144,11 +144,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/*.so.*
 
 %files -n %{lib_name}-devel
-%{_libdir}/*.a
 %{_libdir}/*.so
 %{_libdir}/*.la
-%{_libdir}/%{name}/*.a
 %{_libdir}/%{name}/*.so
 %{_libdir}/%{name}/*.la
-
 
