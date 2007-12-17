@@ -14,7 +14,6 @@ License: LGPL
 Group: Development/Other
 URL: http://www.openldev.org/
 Source0: %{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: libgtksourceview-1.0-devel
 BuildRequires: libglade2.0-devel
 BuildRequires: vte-devel
