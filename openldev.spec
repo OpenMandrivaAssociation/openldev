@@ -73,19 +73,6 @@ chmod ugo-x $RPM_BUILD_ROOT/%{_libdir}/*.la
 chmod ugo-x $RPM_BUILD_ROOT/%{_libdir}/%{name}/*.la
 
 # menu
-mkdir -p %{buildroot}%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
-?package(%{name}):command="%{_bindir}/%{name}" \
-icon="openldev.png" \				
-needs="X11" \
-section="More Applications/Development/Development Environments" \
-title="Openldev" \
-longtitle="Open Linux Development" \
-mimetypes="text/plain" \
-accept_url="false" \
-multiple_files="true" \
-xdg="true"
-EOF
 
 desktop-file-install --vendor="" \
   --remove-category="Application" \
@@ -133,7 +120,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/%{name}
 %{_datadir}/applications/openldev.desktop
 %{_mandir}/*/*
-%{_menudir}/%{name}
 %{_liconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
