@@ -6,7 +6,7 @@
 %define lib_major 1.0
 %define lib_name %mklibname %{name} %{lib_major}
 
-Summary: OpenLDev is a development environment
+Summary: Development environment
 Name: %{name}
 Version: %{version}
 Release: %{release}
