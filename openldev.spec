@@ -96,13 +96,17 @@ perl -pi -e "s/\r\n/\n/" NEWS README
 # change mode for script (add executable mode)
 chmod +x %{buildroot}%{_datadir}/%{name}/templates/*.pl
 
+%if %mdkversion < 200900
 %post 
 %{update_menus}
 %{update_desktop_database}
+%endif
 
+%if %mdkversion < 200900
 %postun 
 %{clean_menus}
 %{clean_desktop_database}
+%endif
 
 %if %mdkversion < 200900
 %post -n %{lib_name} -p /sbin/ldconfig
