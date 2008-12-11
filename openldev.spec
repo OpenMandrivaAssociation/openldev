@@ -25,7 +25,7 @@ BuildRequires: libgnomeprintui-devel
 BuildRequires: libGConf2-devel
 BuildRequires: libgnomeuimm-devel
 BuildRequires: pkgconfig
-BuildRequires: ImageMagick
+BuildRequires: imagemagick
 BuildRequires: chrpath
 BuildRequires: desktop-file-utils
 Requires(post): desktop-file-utils
