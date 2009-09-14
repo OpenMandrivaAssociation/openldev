@@ -1,6 +1,6 @@
 %define name openldev
 %define version 1.0
-%define release %mkrel 4
+%define release %mkrel 5
 
 %define lib_major 0
 %define lib_name %mklibname %{name} %{lib_major}
