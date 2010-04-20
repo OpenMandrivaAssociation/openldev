@@ -15,6 +15,7 @@ Group: Development/Other
 URL: http://www.openldev.org/
 Source0: %{name}-%{version}.tar.bz2
 Patch0: openldev-1.0-gcc43.patch
+Patch1: openldev-1.0-gcc44.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: libgtksourceview-1.0-devel
 BuildRequires: libglade2.0-devel
@@ -60,6 +61,7 @@ Development file for Openldev.
 %prep
 %setup -q -n %{name}
 %patch0 -p0
+%patch1 -p0
 
 %build
 %configure2_5x
