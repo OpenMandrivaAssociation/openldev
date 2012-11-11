@@ -1,0 +1,10 @@
+--- openldev/launcher/main.cc.gcc	2010-04-20 05:57:19.000000000 +0200
++++ openldev/launcher/main.cc	2010-04-20 05:57:36.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include <sys/wait.h>
+ #include <glib.h>
+ #include <stdlib.h>
++#include <stdio.h>
+ #include <iostream>
+ #include <string>
+ using namespace std;

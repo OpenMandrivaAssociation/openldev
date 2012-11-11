@@ -1,0 +1,83 @@
+--- openldev/openldev-dialogs/openldev-import-project.cc.orig	2008-11-11 03:32:16.000000000 +0100
++++ openldev/openldev-dialogs/openldev-import-project.cc	2008-11-11 03:32:31.000000000 +0100
+@@ -18,6 +18,7 @@
+  ***************************************************************************/
+ 
+ #include "openldev-import-project.h"
++#include <cstring>
+ 
+ gchar*
+ openldev_import_project ()
+--- openldev/openldev-dialogs/openldev-new-project.cc.orig	2008-11-11 03:32:50.000000000 +0100
++++ openldev/openldev-dialogs/openldev-new-project.cc	2008-11-11 03:33:06.000000000 +0100
+@@ -18,6 +18,7 @@
+  ***************************************************************************/
+ 
+ #include "openldev-new-project.h"
++#include <cstring>
+ 
+ static void openldev_new_project_dialog_populate_combobox (NewProjectDialog*);
+ static void prep_assistant (GtkAssistant*, GtkWidget*, NewProjectDialog*);
+--- openldev/openldev-utils.cc.orig	2008-11-11 03:38:16.000000000 +0100
++++ openldev/openldev-utils.cc	2008-11-11 03:38:37.000000000 +0100
+@@ -19,6 +19,7 @@
+ 
+ #include "openldev-utils.h"
+ #include <glade/glade.h>
++#include <cstdlib>
+ 
+ gchar* 
+ openldev_add_prefix (gchar *text)
+--- openldev/openldev-widgets/openldev-file-browser.cc.orig	2008-11-11 03:33:43.000000000 +0100
++++ openldev/openldev-widgets/openldev-file-browser.cc	2008-11-11 03:33:57.000000000 +0100
+@@ -18,6 +18,7 @@
+  ***************************************************************************/
+ 
+ #include "openldev-file-browser.h"
++#include <cstring>
+ 
+ vector<string> read_directory (const char*, gboolean);
+ void populate_file_browser (FileBrowser*, vector<string>);
+--- openldev/openldev-widgets/openldev-status-bar.h.orig	2008-11-11 03:34:44.000000000 +0100
++++ openldev/openldev-widgets/openldev-status-bar.h	2008-11-11 03:36:50.000000000 +0100
+@@ -58,17 +58,17 @@
+   \param bar A StatusBar object.
+   \param message The message to show on the status bar.
+ */
+-void openldev_status_bar_set_message (StatusBar *bar, gint bar, gchar *message);
++void openldev_status_bar_set_message (StatusBar *statusbar, gint bar, gchar *message);
+ 
+ /*! Set the current message on the status bar. This message is locked, so other parts of the application cannot edit it. Make sure to unlock the message when you are done! This will append a message on the stack, so when you unlock the message, it will revert to the prior.
+   \param bar A StatusBar object.
+   \param message The message to show on the status bar.
+ */
+-void openldev_status_bar_lock_message (StatusBar *bar, gint bar, gchar *message);
++void openldev_status_bar_lock_message (StatusBar *statusbar, gint bar, gchar *message);
+ 
+ /*! Unlock the status bar message and revert to the prior message. Make sure you do this when locking is no longer necessary!
+   \param bar A StatusBar object.
+ */
+-void openldev_status_bar_unlock_message (StatusBar *bar, gint bar);
++void openldev_status_bar_unlock_message (StatusBar *statusbar, gint bar);
+ 
+ #endif
+--- openldev/openldev-settings/openldev-makefile-parser.cc.orig	2008-11-11 03:30:21.000000000 +0100
++++ openldev/openldev-settings/openldev-makefile-parser.cc	2008-11-11 03:30:55.000000000 +0100
+@@ -18,6 +18,7 @@
+  ***************************************************************************/
+  
+ #include "openldev-makefile-parser.h"
++#include <algorithm>
+ 
+ bool openldev_makefile_buffer_new_variable (MakefileBuffer*, string&);
+ void openldev_makefile_buffer_new_script (MakefileBuffer*, string&);
+--- openldev/openldev-settings/openldev-project.cc.orig	2008-11-11 03:31:15.000000000 +0100
++++ openldev/openldev-settings/openldev-project.cc	2008-11-11 03:31:39.000000000 +0100
+@@ -18,6 +18,7 @@
+  ***************************************************************************/
+  
+ #include "openldev-project.h"
++#include <cstring>
+ 
+ static void openldev_project_settings_get_makefiles (vector<string>&, string);
+ static vector<string> openldev_project_settings_get_subdirs (string);
