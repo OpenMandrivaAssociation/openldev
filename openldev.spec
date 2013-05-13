@@ -15,7 +15,7 @@ Patch1: openldev-1.0-gcc44.patch
 BuildRequires: pkgconfig(gtksourceview-1.0)
 BuildRequires: libglade2.0-devel
 BuildRequires: vte-devel
-BuildRequires: libxml2-devel
+BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(libgnomeprint-2.2)
 BuildRequires: pkgconfig(libgnomeprintui-2.2)
 BuildRequires: pkgconfig(gconf-2.0)
