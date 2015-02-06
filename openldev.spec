@@ -5,7 +5,7 @@
 Summary: Development environment
 Name: openldev
 Version: 1.0
-Release: 8
+Release: 9
 License: GPLv2+
 Group: Development/Other
 URL: http://www.openldev.org/
