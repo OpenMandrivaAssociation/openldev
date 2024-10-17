@@ -8,7 +8,7 @@ Version: 1.0
 Release: 9
 License: GPLv2+
 Group: Development/Other
-URL: http://www.openldev.org/
+URL: https://www.openldev.org/
 Source0: %{name}-%{version}.tar.bz2
 Patch0: openldev-1.0-gcc43.patch
 Patch1: openldev-1.0-gcc44.patch
