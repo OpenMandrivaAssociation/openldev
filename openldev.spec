@@ -12,6 +12,11 @@ URL: https://www.openldev.org/
 Source0: %{name}-%{version}.tar.bz2
 Patch0: openldev-1.0-gcc43.patch
 Patch1: openldev-1.0-gcc44.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(gtksourceview-1.0)
 BuildRequires: libglade2.0-devel
 BuildRequires: vte-devel
